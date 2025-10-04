@@ -4,8 +4,8 @@
   import path from 'path';
 
   export default defineConfig({
-    plugins: [react()],
-    resolve: {
+    base: '/finance-management-app/',
+    plugins: [react()],    resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
         'vaul@1.1.2': 'vaul',
