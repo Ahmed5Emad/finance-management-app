@@ -4,7 +4,7 @@ A modern, intuitive application for managing your personal finances. Track your 
 
 ## 🚀 Live Demo
 
-You can view a live demo of the application here: [https://ahmed5emad.github.io/finance-management-app/](https://ahmed5emad.github.io/finance-management-app/)
+You can view a live demo of the application here: [Demo](https://ahmed5emad.github.io/finance-management-app/)
 
 ## ✨ Features
 
