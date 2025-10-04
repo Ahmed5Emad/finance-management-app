@@ -2,6 +2,10 @@
 
 A modern, intuitive application for managing your personal finances. Track your income, expenses, and get a clear overview of your spending habits with beautiful charts and a clean interface.
 
+## 🚀 Live Demo
+
+You can view a live demo of the application here: [https://ahmed5emad.github.io/finance-management-app/](https://ahmed5emad.github.io/finance-management-app/)
+
 ## ✨ Features
 
 - **Dashboard Overview:** A central hub to view your current balance, recent transactions, and spending summaries.
