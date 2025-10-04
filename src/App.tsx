@@ -17,56 +17,14 @@ export interface Transaction {
 
 export default function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [transactions, setTransactions] = useState<Transaction[]>([
-    {
-      id: '1',
-      type: 'income',
-      amount: 3500,
-      category: 'Salary',
-      description: 'Monthly salary',
-      date: '2025-10-01'
-    },
-    {
-      id: '2',
-      type: 'expense',
-      amount: 1200,
-      category: 'Rent',
-      description: 'October rent payment',
-      date: '2025-10-01'
-    },
-    {
-      id: '3',
-      type: 'expense',
-      amount: 85,
-      category: 'Groceries',
-      description: 'Weekly groceries',
-      date: '2025-10-02'
-    },
-    {
-      id: '4',
-      type: 'expense',
-      amount: 45,
-      category: 'Transportation',
-      description: 'Gas',
-      date: '2025-10-03'
-    },
-    {
-      id: '5',
-      type: 'expense',
-      amount: 120,
-      category: 'Entertainment',
-      description: 'Dinner and movie',
-      date: '2025-10-03'
-    },
-    {
-      id: '6',
-      type: 'income',
-      amount: 200,
-      category: 'Freelance',
-      description: 'Website design project',
-      date: '2025-10-04'
-    }
-  ]);
+  const [transactions, setTransactions] = useState<Transaction[]>(() => {
+    const savedTransactions = localStorage.getItem('transactions');
+    return savedTransactions ? JSON.parse(savedTransactions) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+  }, [transactions]);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
 
   // Initialize theme from localStorage
